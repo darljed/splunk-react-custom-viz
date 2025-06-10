@@ -1,0 +1,27 @@
+<dashboard version="1.1" theme="light">
+  <label>Demo</label>
+  <row>
+    <panel>
+      <title>Sample React Visualization</title>
+      <html>
+        <p>This is a template for creating a Splunk visualization with ReactJS.</p>
+        <p>Here's a sample output of the visualization.</p>
+      </html>
+      <viz type="splunk-react-custom-viz.react-viz">
+        <search>
+          <query>| makeresults</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="trellis.enabled">0</option>
+        <option name="trellis.scales.shared">1</option>
+        <option name="trellis.size">medium</option>
+      </viz>
+      <html>
+        <p>Github: <a href="https://github.com/darljed/splunk-react-custom-viz" target="_blank">https://github.com/darljed/splunk-react-custom-viz</a></p>
+      </html>
+    </panel>
+  </row>
+</dashboard>
