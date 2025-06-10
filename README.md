@@ -1,4 +1,4 @@
-# custom-forms: React-Powered Splunk Custom Visualization
+# react-viz: React-Powered Splunk Custom Visualization
 
 This project is an extended version of the [Splunk Custom Visualization Tutorial](https://docs.splunk.com/Documentation/Splunk/9.4.2/AdvancedDev/CustomVizTutorial), modified to integrate **React 18** for building dynamic and interactive user interfaces. It's designed to be open-source and flexible for your Splunk dashboard needs.
 
@@ -6,7 +6,7 @@ This project is an extended version of the [Splunk Custom Visualization Tutorial
 
 ## 📖 Overview
 
-**custom-forms** is a Splunk custom visualization that lets you use **React components** to display and interact with your search data. This enables rich, modern UIs within your Splunk dashboards.
+**react-viz** is a Splunk custom visualization that lets you use **React components** to display and interact with your search data. This enables rich, modern UIs within your Splunk dashboards.
 
 ---
 
@@ -21,7 +21,7 @@ To get started, you'll need:
 
 ## 🚀 Setup and Installation
 
-Follow these steps to get the `custom-forms` visualization running in your Splunk environment.
+Follow these steps to get the `react-viz` visualization running in your Splunk environment.
 
 ### 1. Place React and ReactDOM UMD Builds
 
@@ -66,16 +66,16 @@ require.config({
 });
 ```
 
-> 🔁 Replace `YOUR_APP_NAME` with the actual folder name of your Splunk application (e.g., `custom-forms`).
+> 🔁 Replace `YOUR_APP_NAME` with the actual folder name of your Splunk application (e.g., `react-viz`).
 
 ---
 
 ### 3. Install Project Dependencies
 
-Navigate to the `custom-forms` directory:
+Navigate to the `react-viz` directory:
 
 ```bash
-cd your_splunk_app/appserver/static/visualizations/custom-forms/
+cd your_splunk_app/appserver/static/visualizations/react-viz/
 npm install
 ```
 
@@ -89,7 +89,7 @@ Compile your React code into a single file:
 npm run build
 ```
 
-The output will be written to `visualization.js` inside the `custom-forms` folder.
+The output will be written to `visualization.js` inside the `react-viz` folder.
 
 ---
 
@@ -101,7 +101,7 @@ You have two options:
 
 #### Option 1: Direct Installation
 
-Copy the entire `custom-forms` app directory (with `appserver/static`, `default/`, etc.) to:
+Copy the entire `react-viz` app directory (with `appserver/static`, `default/`, etc.) to:
 
 ```
 $SPLUNK_HOME/etc/apps/
@@ -109,7 +109,7 @@ $SPLUNK_HOME/etc/apps/
 
 #### Option 2: Use with app_templates
 
-If you're building a new app, structure `custom-forms` within your app’s `app_templates/` directory to keep everything bundled.
+If you're building a new app, structure `react-viz` within your app’s `app_templates/` directory to keep everything bundled.
 
 > ✅ After placing the app, **restart Splunk** for changes to take effect.
 
