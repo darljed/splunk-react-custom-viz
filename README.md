@@ -23,7 +23,20 @@ To get started, you'll need:
 
 Follow these steps to get the `react-viz` visualization running in your Splunk environment.
 
-### 1. Place React and ReactDOM UMD Builds
+### 1. clone the repository in directly to your splunk apps directory 
+
+Using `git` clone the `splunk-react-custom-viz` repository in your splunk app's directory
+
+```
+cd $SPLUNK_HOME/etc/apps/
+git clone https://github.com/darljed/splunk-react-custom-viz.git
+```
+
+Replace `$SPLUNK_HOME` with the path for your Splunk home directory.
+
+**Then restart Splunk.**
+
+### 2. Place React and ReactDOM UMD Builds **(OPTIONAL)**
 
 Even with a build process, it's good practice to ensure Splunk's RequireJS can locate React and ReactDOM independently.
 
@@ -37,14 +50,14 @@ Even with a build process, it's good practice to ensure Splunk's RequireJS can l
 Place the downloaded files into:
 
 ```
-your_splunk_app/appserver/static/vendor/
+splunk-react-custom-viz/appserver/static/vendor/
 ```
 
 Create the `vendor` folder if it doesn't exist.
 
 ---
 
-### 2. Configure RequireJS
+### 3. Configure RequireJS **(OPTIONAL)**
 
 In your Splunk app’s `appserver/static/app.js` file (create it if needed), add:
 
@@ -66,7 +79,7 @@ require.config({
 });
 ```
 
-> 🔁 Replace `YOUR_APP_NAME` with the actual folder name of your Splunk application (e.g., `react-viz`).
+> 🔁 Replace `YOUR_APP_NAME` with the actual folder name of your Splunk application (e.g., `splunk-react-custom-viz`).
 
 ---
 
@@ -75,7 +88,7 @@ require.config({
 Navigate to the `react-viz` directory:
 
 ```bash
-cd your_splunk_app/appserver/static/visualizations/react-viz/
+cd $SPLUNK_HOME/etc/apps/splunk-react-custom-viz/appserver/static/visualizations/react-viz/
 npm install
 ```
 
@@ -94,26 +107,6 @@ The output will be written to `visualization.js` inside the `react-viz` folder.
 ---
 
 ## 🧪 Running the Visualization
-
-### Deploy to Splunk
-
-You have two options:
-
-#### Option 1: Direct Installation
-
-Copy the entire `react-viz` app directory (with `appserver/static`, `default/`, etc.) to:
-
-```
-$SPLUNK_HOME/etc/apps/
-```
-
-#### Option 2: Use with app_templates
-
-If you're building a new app, structure `react-viz` within your app’s `app_templates/` directory to keep everything bundled.
-
-> ✅ After placing the app, **restart Splunk** for changes to take effect.
-
----
 
 ### Add to a Dashboard
 
