@@ -8,6 +8,9 @@ This project is an extended version of the [Splunk Custom Visualization Tutorial
 
 **react-viz** is a Splunk custom visualization that lets you use **React components** to display and interact with your search data. This enables rich, modern UIs within your Splunk dashboards.
 
+<img width="1469" height="433" alt="image" src="https://github.com/user-attachments/assets/ccc8f343-00ca-4299-90e3-6ac410091a56" />
+
+
 ---
 
 ## ⚙️ Requirements
